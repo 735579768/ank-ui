@@ -1,0 +1,68 @@
+@maincolor:#01a3a5;//页面主色调
+@btncolor:#01a3a5;//按钮主色调
+@mainwidth:1100px;//页面主宽度
+@navheight:40px;//导航高
+
+//标题的高度
+.m-title(@h:40px){
+	height: @h;
+	line-height:@h;
+}
+
+/*************************重置样式***********************/
+@import "reset.less";
+/*************************公共样式***********************/
+@import "common.less";
+/*************************网页主色调***********************/
+@import "color.less";
+
+/*************************前台样式框架***********************/
+/**标题**/
+.m-title{
+	.m-title();
+	.m-t{
+		display: inline-block;
+		font-size: 16px;
+	}
+	.more{
+		display: inline-block;
+		float: right;
+	}
+}
+/**页头**/
+#header {
+	width:100%;
+	.header-inner{
+		width:@mainwidth;
+		margin: 0px auto;
+		.logo{
+			float: left;
+		}
+	}
+}
+/**导航**/
+#nav{
+	width:100%;
+	.nav-inner{
+		width:@mainwidth;
+		margin: 0px auto;
+		.nav-item{
+			float: left;
+			a{display: block;padding: 0px 20px;height: @navheight;}
+		}
+	}
+}
+/**容器**/
+.container{
+	width:@mainwidth;
+	margin: 0px auto;
+}
+
+/**页脚**/
+#footer{
+	width:100%;
+	.footer-inner{
+		width:@mainwidth;
+		margin: 0px auto;
+	}
+}
